@@ -37,7 +37,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: "Geist", -apple-system, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 350;
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -88,7 +88,7 @@ a { color: inherit; }
 
 .package-name {
   font-size: clamp(26px, 2.4vw, 32px);
-  font-weight: 350;
+  font-weight: 300;
   line-height: 1.2;
   margin: 0 0 6px;
   color: var(--ink);
@@ -96,7 +96,7 @@ a { color: inherit; }
 
 .package-price {
   font-size: clamp(26px, 2.4vw, 32px);
-  font-weight: 350;
+  font-weight: 300;
   line-height: 1.2;
   margin: 0 0 14px;
   color: var(--ink);
@@ -164,7 +164,7 @@ a { color: inherit; }
 
 .collaterals-title {
   font-size: clamp(26px, 2.4vw, 32px);
-  font-weight: 350;
+  font-weight: 300;
   color: var(--ink);
   margin: 0 0 12px;
 }
