@@ -1,0 +1,275 @@
+/* Helocrene Studio — Pricing
+   Fonts: Geist (sans, headings/body) + Testuale (serif, category labels) */
+
+@font-face {
+  font-family: "Geist";
+  src: url("fonts/Geist-VariableFont.ttf") format("truetype-variations"),
+       url("fonts/Geist-VariableFont.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Testuale";
+  src: url("fonts/Testuale-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --ink: #1a1a1a;
+  --grey: #a9aaaa;
+  --grey-faint: #d8d8d8;
+  --hairline: #ececec;
+  --bg: #ffffff;
+  --max: 1240px;
+  --gap: 96px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Geist", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 350;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: inherit; }
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  padding: 40px 0 8px;
+}
+
+.logo {
+  display: inline-block;
+  width: 172px;
+  height: auto;
+}
+
+.logo svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  fill: var(--ink);
+}
+
+/* ---------- Pricing hero / packages ---------- */
+
+.pricing {
+  padding: 72px 0 40px;
+}
+
+.package-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--gap);
+  row-gap: 72px;
+}
+
+.package-head {
+  margin-bottom: 40px;
+}
+
+.package-name {
+  font-size: clamp(26px, 2.4vw, 32px);
+  font-weight: 350;
+  line-height: 1.2;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.package-price {
+  font-size: clamp(26px, 2.4vw, 32px);
+  font-weight: 350;
+  line-height: 1.2;
+  margin: 0 0 14px;
+  color: var(--ink);
+}
+
+.package-meta {
+  font-family: "Testuale", Georgia, serif;
+  font-size: 20px;
+  color: var(--grey);
+  margin: 0 0 28px;
+}
+
+.package-desc {
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: justify;
+  color: var(--ink);
+  margin: 0;
+  max-width: 46em;
+}
+
+.package-groups {
+  margin-top: 48px;
+}
+
+.spec-group {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 24px;
+  padding: 22px 0;
+}
+
+.spec-label {
+  font-family: "Testuale", Georgia, serif;
+  font-size: 22px;
+  color: var(--grey);
+  padding-top: 2px;
+}
+
+.spec-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.spec-list li {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--ink);
+}
+
+.spec-num {
+  color: var(--grey);
+  font-size: 12px;
+  vertical-align: super;
+  margin-left: 2px;
+}
+
+/* ---------- Optional collaterals ---------- */
+
+.collaterals {
+  padding: 56px 0 96px;
+  margin-top: 40px;
+}
+
+.collaterals-title {
+  font-size: clamp(26px, 2.4vw, 32px);
+  font-weight: 350;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+
+.collaterals-sub {
+  font-family: "Testuale", Georgia, serif;
+  font-size: 17px;
+  color: var(--grey);
+  margin: 0 0 48px;
+}
+
+.collateral-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--gap);
+}
+
+.collateral-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion + .accordion {
+  margin-top: 4px;
+}
+
+.accordion summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0;
+  font-family: "Testuale", Georgia, serif;
+  font-size: 22px;
+  color: var(--grey);
+}
+
+.accordion summary::-webkit-details-marker { display: none; }
+
+.accordion summary .toggle {
+  font-family: "Geist", sans-serif;
+  font-size: 15px;
+  color: var(--grey-faint);
+  transition: transform 0.25s ease;
+  flex: none;
+}
+
+.accordion[open] summary .toggle { transform: rotate(45deg); }
+
+.accordion .accordion-body {
+  padding: 0 0 26px;
+}
+
+.accordion ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion ul li {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--ink);
+}
+
+.accordion .no-list {
+  font-size: 16px;
+  color: var(--ink);
+  padding-bottom: 2px;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  padding: 32px 0 56px;
+  font-size: 13px;
+  color: var(--grey);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 860px) {
+  :root { --gap: 0px; }
+  .wrap { padding: 0 24px; }
+  .package-grid { grid-template-columns: 1fr; row-gap: 64px; }
+  .collateral-grid { grid-template-columns: 1fr; row-gap: 8px; }
+  .spec-group { grid-template-columns: 120px 1fr; gap: 16px; }
+  .pricing { padding: 48px 0 24px; }
+}
+
+@media (max-width: 480px) {
+  .spec-group { grid-template-columns: 1fr; gap: 8px; }
+  .spec-label { padding-top: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .accordion summary .toggle { transition: none; }
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
