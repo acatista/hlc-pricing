@@ -80,14 +80,11 @@ a { color: inherit; }
   grid-template-columns: 1fr 1fr;
   column-gap: var(--gap);
   row-gap: 72px;
-  align-items: stretch;
 }
 
-/* Treat each package card as a vertical flex container to equalize heights */
 .package-card {
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .package-head {
@@ -122,10 +119,10 @@ a { color: inherit; }
   line-height: 1.7;
   text-align: justify;
   color: var(--ink);
-  margin: 0;
+  margin: 0 0 48px 0;
   max-width: 46em;
-  flex-grow: 1;
-  padding-bottom: 48px;
+  /* Forces both description blocks to reserve a consistent height */
+  height: calc(16px * 1.7 * 4); 
 }
 
 .package-groups {
@@ -262,8 +259,8 @@ a { color: inherit; }
   :root { --gap: 0px; }
   .wrap { padding: 0 24px; }
   .package-grid { grid-template-columns: 1fr; row-gap: 64px; }
-  .package-card { display: block; height: auto; }
-  .package-desc { padding-bottom: 0; margin-bottom: 48px; }
+  .package-card { display: block; }
+  .package-desc { height: auto; margin-bottom: 48px; }
   .package-groups { margin-top: 48px; }
   .collateral-grid { grid-template-columns: 1fr; row-gap: 8px; }
   .spec-group { grid-template-columns: 120px 1fr; gap: 16px; }
