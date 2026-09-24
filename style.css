@@ -3,8 +3,8 @@
 
 @font-face {
   font-family: "Geist";
-  src: url("fonts/Geist-VariableFont.ttf") format("truetype-variations"),
-       url("fonts/Geist-VariableFont.ttf") format("truetype");
+  src: url("Geist-VariableFont.ttf") format("truetype-variations"),
+       url("Geist-VariableFont.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: "Testuale";
-  src: url("fonts/Testuale-Regular.ttf") format("truetype");
+  src: url("Testuale-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
