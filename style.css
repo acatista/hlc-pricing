@@ -82,6 +82,12 @@ a { color: inherit; }
   row-gap: 72px;
 }
 
+/* Treat each package card as a grid container to align internal rows */
+.package-card {
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+}
+
 .package-head {
   margin-bottom: 40px;
 }
@@ -114,12 +120,14 @@ a { color: inherit; }
   line-height: 1.7;
   text-align: justify;
   color: var(--ink);
-  margin: 0;
+  margin: 0 0 48px; /* Replaces margin-top spacing on groups */
   max-width: 46em;
 }
 
 .package-groups {
-  margin-top: 48px;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3; /* Matches the number of spec-groups inside */
 }
 
 .spec-group {
@@ -127,6 +135,7 @@ a { color: inherit; }
   grid-template-columns: 150px 1fr;
   gap: 24px;
   padding: 22px 0;
+  align-content: start;
 }
 
 .spec-label {
@@ -252,6 +261,9 @@ a { color: inherit; }
   :root { --gap: 0px; }
   .wrap { padding: 0 24px; }
   .package-grid { grid-template-columns: 1fr; row-gap: 64px; }
+  .package-card { display: block; } /* Disable subgrid on mobile single-column layout */
+  .package-desc { margin-bottom: 0; }
+  .package-groups { margin-top: 48px; display: block; }
   .collateral-grid { grid-template-columns: 1fr; row-gap: 8px; }
   .spec-group { grid-template-columns: 120px 1fr; gap: 16px; }
   .pricing { padding: 48px 0 24px; }
